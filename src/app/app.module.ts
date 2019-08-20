@@ -2,8 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
 
 import { RouterModule } from '@angular/router';
@@ -39,7 +39,7 @@ import { LoginComponent } from './login/login.component';
    imports: [
       BrowserModule,
       AngularFireModule.initializeApp(environment.firebase),
-      AngularFirestoreModule,
+      AngularFireDatabaseModule,
       AngularFireAuthModule,
       NgbModule,
       RouterModule.forRoot([
